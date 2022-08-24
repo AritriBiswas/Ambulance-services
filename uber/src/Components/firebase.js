@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-
+import {getFirestore} from "firebase/firestore"
 
 
 // TODO: Add SDKs for Firebase products that you want to use
@@ -14,19 +14,19 @@ import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
 
-  apiKey: "AIzaSyA0RgaEDcsOQX22HreDhcvz9WBQv3CDsiE",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
 
-  authDomain: "uber-71356.firebaseapp.com",
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
 
-  projectId: "uber-71356",
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
 
-  storageBucket: "uber-71356.appspot.com",
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
 
-  messagingSenderId: "133155770054",
+  messagingSenderId:process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID ,
 
-  appId: "1:133155770054:web:b56c36d8092b31982551c7",
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
 
-  measurementId: "G-PQN2QTV5FQ"
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID
 
 };
 
@@ -34,6 +34,7 @@ const firebaseConfig = {
 // Initialize Firebase
 
 const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app)
 export const auth = getAuth(app);
 export default app;
 

@@ -1,0 +1,42 @@
+.channelInput {
+    border-radius: 20px;
+    display:flex;
+  }
+  
+  .channelInput > form {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chatInput > form > input {
+    position: fixed;
+    bottom: 30px;
+    width: 85%;
+    outline: none;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .chatInput > form > button {
+    height: 0;
+    width: 70vh;
+    border: none;
+    background-color: transparent;
+    position: fixed;
+    bottom: 30px;
+    
+    outline: none;
+    
+    border-radius: 3px;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .submit{
+    border:none;
+
+  }
